@@ -38,6 +38,9 @@ return packer.startup(function(use)
 	-- Icons
 	use 'kyazdani42/nvim-web-devicons'
 
+    -- Go
+    use 'fatih/vim-go'
+
 	-- git labels
 	use {
 		'lewis6991/gitsigns.nvim',
