@@ -33,7 +33,7 @@ return packer.startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- Themes
-	use 'morhetz/gruvbox'
+    use 'ellisonleao/gruvbox.nvim'
 
 	-- Icons
 	use 'kyazdani42/nvim-web-devicons'
@@ -46,6 +46,9 @@ return packer.startup(function(use)
 			require('gitsigns').setup{}
 		end
 	}
+
+    -- File explorer
+    use 'kyazdani42/nvim-tree.lua'
 
 	-- Treesitter interface
 	use {

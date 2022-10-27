@@ -16,4 +16,7 @@ map('', '<down>', '<nop>')
 map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
 
-
+-- NvimTree
+map('n', '<C-n>', ':NvimTreeToggle<CR>')            -- open/close
+map('n', '<leader>f', ':NvimTreeRefresh<CR>')       -- refresh
+map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
