@@ -29,54 +29,54 @@ if not status_ok then
 end
 
 return packer.startup(function(use)
-	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-	-- Themes
+    -- Themes
     use 'ellisonleao/gruvbox.nvim'
 
-	-- Icons
-	use 'kyazdani42/nvim-web-devicons'
+    -- Icons
+    use 'kyazdani42/nvim-web-devicons'
 
     -- Go
     use 'fatih/vim-go'
 
-	-- git labels
-	use {
-		'lewis6991/gitsigns.nvim',
-		requires = { 'nvim-lua/plenary.nvim' },
-		config = function()
-			require('gitsigns').setup{}
-		end
-	}
+    -- git labels
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('gitsigns').setup{}
+        end
+    }
 
     -- File explorer
     use 'kyazdani42/nvim-tree.lua'
 
-	-- Treesitter interface
-	use {
-		'nvim-treesitter/nvim-treesitter',
-		run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-	}
+    -- Treesitter interface
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
 
-	-- LSP
-	use 'neovim/nvim-lspconfig'
+    -- LSP
+    use 'neovim/nvim-lspconfig'
 
-	-- Autocomplete
-	use {
-		'hrsh7th/nvim-cmp',
-		requires = {
-			'L3MON4D3/LuaSnip',
-			'hrsh7th/cmp-nvim-lsp',
-			'hrsh7th/cmp-path',
-			'hrsh7th/cmp-buffer',
-			'saadparwaiz1/cmp_luasnip',
-		},
-	}
+    -- Autocomplete
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = {
+            'L3MON4D3/LuaSnip',
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-buffer',
+            'saadparwaiz1/cmp_luasnip',
+        },
+    }
 
-	-- Automatically set up your configuration after cloning packer.nvim
-  	-- Put this at the end after all plugins
-	if packer_bootstrap then
-		require('packer').sync()
-	end
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 end)
